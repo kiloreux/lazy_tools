@@ -13,7 +13,7 @@ int main(void)
 	struct passwd *user = getpwuid(getuid());
 	char *homedir = strcat(user->pw_dir,"/.bashrc");
 	FILE *profile;
-	profile=fopen(homedir, "a");	
+ 	profile=fopen(homedir, "a");
 	fprintf(profile,"%s", "PATH=");
 	fprintf(profile,"%s", path);
 	fprintf(profile,"%s", "/:$PATH\n");
