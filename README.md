@@ -7,7 +7,9 @@ This is a bunch of tools that I have developed due to my super laziness on worki
 ## Usage ##
 
 `envthis VARIABLE_NAME # adds the current path under VARIABLE_NAME`
+
 `paththis # adds the current path to the $PATH variable`
+
 `shortenthis https://www.google.com # shortens the URL and give it back to you`
 
 ##Compiling###
