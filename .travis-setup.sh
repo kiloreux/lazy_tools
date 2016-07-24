@@ -1,4 +1,4 @@
-sudo apt-get install git
+sudo apt-get -y install git
 git clone https://github.com/json-c/json-c.git json-c
 cd json-c
 bash autogen.sh
