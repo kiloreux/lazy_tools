@@ -1,0 +1,7 @@
+pipelines:
+  default:
+    - step:
+        script:
+          - sudo bash .travis-setup.sh
+          - sudo apt-get install libcurl3
+          - make all
