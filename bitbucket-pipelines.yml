@@ -3,5 +3,5 @@ pipelines:
     - step:
         script:
           - sudo bash .travis-setup.sh
-          - sudo apt-get install libcurl3
+          - sudo apt-get install libcurl3 libcurl4-nss-dev
           - make all
