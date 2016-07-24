@@ -12,3 +12,7 @@ shortenthis:
 	gcc  shortenthis.c -o shortenthis $(LDFLAGS) $(CFLAGS)
 clean:
 	rm paththis envthis shortenthis
+install:
+	sudo mv paththis /usr/bin/
+	sudo mv shortenthis /usr/bin/
+	sudo mv envthis /usr/bin/
