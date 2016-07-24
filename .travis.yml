@@ -1,4 +1,6 @@
 language: c
 sudo: required
+before_script:
+  - sudo apt-get install libjson0 libjson0-dev libjson0-dbg libcurl3 libcurl3-dbg
 script:
-    - make all
+  - make all
