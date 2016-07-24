@@ -2,6 +2,7 @@ pipelines:
   default:
     - step:
         script:
+          - sudo apt-get update
           - sudo apt-get -y install libcurl3 libcurl4-nss-dev
           - sudo apt-get -y install dh-autoreconf build-essential
           - sudo bash .travis-setup.sh
