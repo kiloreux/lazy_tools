@@ -1,5 +1,5 @@
 # Lazy Tools #
-
+[![Build Status](https://travis-ci.org/Kiloreux/lazy_tools.svg?branch=master)](https://travis-ci.org/Kiloreux/lazy_tools)
 -------------------------------------------------------------------------------
 
 This is a bunch of tools that I have developed due to my super laziness on working with the linux OS, if you think you have an idea for a tool really lazy, open an issue, and I'd be happy to develop the laziest tool every time.
