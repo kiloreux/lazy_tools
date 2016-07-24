@@ -3,4 +3,4 @@ sudo: required
 before_script:
   - bash .travis-setup.sh
 script:
-  - echo "Liar build"
+  - make all
