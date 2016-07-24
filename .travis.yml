@@ -1,6 +1,8 @@
 language: c
 sudo: required
 before_script:
-  - sudo apt-get -y install libjson0 libjson0-dev libjson0-dbg libcurl3 libcurl3-dbg libjson-c-dev libjson-c2
+  - sudo apt-get -y install libjson0 libjson0-dev libjson0-dbg libcurl3 libcurl3-dbg
+  - pkg-config --libs --cflags json-c
+  - pkg-config --libs --cflags libcurl
 script:
-  - make all
+  - echo "Liar build"
