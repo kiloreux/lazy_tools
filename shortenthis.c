@@ -5,24 +5,6 @@
 #include<string.h>
 #include<curl/curl.h>
 
-// Needs to be checked for errors, it's not working
-/*
-int is_valid_url(char* url) {
-  char* url_regx = "dadsa";
-  regex_t regex;
-  int ret = regcomp(&regex, "(^(([^:\/?#]+):)?(//([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?)", REG_EXTENDED);
-  ret = regexec(&regex, url, 0, NULL, 0);
-  regfree(&regex);
-  if (!ret) {
-    return 1;
-  } else if (ret == REG_NOMATCH) {
-    return 0;
-  } else {
-    return -1;
-  }
-}
-*/
-
 struct string {
   char* res;
   size_t len;
@@ -69,8 +51,6 @@ int main(int argc, char *argv[]) {
 
   handle = curl_easy_init();
   req_body = json_object_new_object();
-  res_body = json_object_new_object();
-  short_url = json_object_new_object();
   json_object_object_add(req_body, "longUrl", json_object_new_string(argv[1]));
   headers = curl_slist_append(headers, "Content-Type: application/json");
   headers = curl_slist_append(headers, "Accept: application/json");
@@ -91,5 +71,8 @@ int main(int argc, char *argv[]) {
   printf("%s\n", json_object_to_json_string_ext(short_url, JSON_C_TO_STRING_SPACED | JSON_C_TO_STRING_PRETTY));
   free(res.res);
   curl_easy_cleanup(handle);
+  json_object_put(res_body);
+  json_object_put(req_body);
+  json_object_put(short_url);
   return 0;
 }
